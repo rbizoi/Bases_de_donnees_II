@@ -1,15 +1,18 @@
 set serveroutput on
-var v_li varchar2(20)
-
 /*
   Commentaire muti-lignes
   suite commentaire 
 */
+
 -- Commentaire mono-ligne
+
+var v_li varchar2(20)
+ACCEPT variable_subst CHAR DEF 'Bonjour' PROMPT 'Variable substitution ?';
+
 declare  
     v_pl    varchar(20) := 'Tintin';   
     v_date  date        := sysdate;
-    v_subst varchar(20) := '&variable';
+    v_subst varchar(20) := '&variable_subst';
     v_utl   varchar(20);   
     v_uid   number      := uid;   
 begin
