@@ -88,6 +88,7 @@ ORDER BY TABLE_NAME,COLUMN_ID;
 SELECT UC_R.TABLE_NAME,
        UCC_R.COLUMN_NAME,
        UC_R.CONSTRAINT_TYPE,
+       UC_R.CONSTRAINT_NAME,
        DECODE(UC_R.CONSTRAINT_TYPE,'P','PK-Clé Primaire',
                                    'R', 'FK-Clé Étrangère',
                                    'C','CHECK', 
